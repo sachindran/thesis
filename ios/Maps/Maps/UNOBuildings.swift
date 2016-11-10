@@ -16,228 +16,49 @@ struct Building {
 
 class UNOBuilidings: NSObject  {
     let buildings: [Building] = [
-        Building(Name : "Work Building (AD)",Coordinates : CLLocationCoordinate2D.init(latitude:37.436209, longitude: -121.8942037)),
+        Building(Name : "Test 1",Coordinates : CLLocationCoordinate2D.init(latitude:37.4001125, longitude: -121.959726)),
+        Building(Name : "Test 2",Coordinates : CLLocationCoordinate2D.init(latitude:37.436209, longitude: -121.8942037)),
         Building(Name : "Administration Building (AD)",Coordinates : CLLocationCoordinate2D.init(latitude:30.0265908, longitude: -90.0687805)),
         Building(Name : "Advanced Technology Center",Coordinates : CLLocationCoordinate2D.init(latitude:30.0319744, longitude: -90.0666836)),
         Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
         Building(Name : "Athletic Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0539645)),
         Building(Name : "ATM",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0277085, longitude: -90.0685991)),
         Building(Name : "Bicentennial Education Center (ED)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0269345, longitude: -90.0696859)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        Building(Name : "Amphitheater",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0281303, longitude: -90.0679018)),
-        
+        Building(Name : "Biology Building (BIO)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0269345, longitude: -90.0696859)),
+        Building(Name : "Center for Energy Resource Management (CERM)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0304945, longitude: -90.0663327)),
+        Building(Name : "Chemistry-Sciences Annex (CSB)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0263246, longitude: -90.0682276)),
+        Building(Name : "Computer Center (CC)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0263246, longitude: -90.0682276)),
+        Building(Name : "The Cove",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0264361, longitude: -90.0691932)),
+        Building(Name : "Earl K. Long Library (LIB)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0264361, longitude: -90.0691932)),
+        Building(Name : "Engineering Building (EN)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0264361, longitude: -90.0691932)),
+        Building(Name : "Facility Services",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0279937, longitude: -90.0696798)),
+        Building(Name : "Fine Arts Building (FA)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0279937, longitude: -90.0696798)),
+        Building(Name : "Geology &amp; Psychology Building",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0279937, longitude: -90.0696798)),
+        Building(Name : "Homer L. Hitt Alumni Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0292477, longitude: -90.0681563)),
+        Building(Name : "Human Performance Center (HPC)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0276593, longitude: -90.0662788)),
+        Building(Name : "International Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0311299, longitude: -90.0648232)),
+        Building(Name : "Kirschman Hall (KH)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0311299, longitude: -90.0689243)),
+        Building(Name : "Lafitte Village",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0246244, longitude: -90.0690664)),
+        Building(Name : "Lakefront Arena",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0297087, longitude: -90.0542144)),
+        Building(Name : "Liberal Arts Building (LA)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0283952, longitude: -90.074955)),
+        Building(Name : "Maestri Field at First NBC Ballpark",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0302556, longitude: -90.0505327)),
+        Building(Name : "Mathematics Building (MATH)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0299614, longitude: -90.0691808)),
+        Building(Name : "Milneburg Hall",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0278476, longitude: -90.0680628)),
+        Building(Name : "Navy Information Technology Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0321572, longitude: -90.0609189)),
+        Building(Name : "Newman Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0277533, longitude: -90.0648985)),
+        Building(Name : "Oliver St. Pé Center - TRAC",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0237203, longitude: -90.069511)),
+        Building(Name : "Parking Lots",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0271486, longitude: -90.0712017)),
+        Building(Name : "Performing Arts Center (PAC)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0277028, longitude: -90.0680419)),
+        Building(Name : "Pontchartrain Hall North",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0252022, longitude: -90.0659541)),
+        Building(Name : "Pontchartrain Hall South",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0252022, longitude: -90.0654432)),
+        Building(Name : "Privateer Enrollment Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0264074, longitude: -90.0680128)),
+        Building(Name : "Privateer Place (PRVTER)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.029626, longitude: -90.0724492)),
+        Building(Name : "Recreation &amp; Fitness Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0294356, longitude: -90.0662425)),
+        Building(Name : "The Sandbar at The Cove",Coordinates : CLLocationCoordinate2D.init(latitude: 30.027954, longitude: -90.0722507)),
+        Building(Name : "School of Hotel, Restaurant &amp; Tourism Administration",Coordinates : CLLocationCoordinate2D.init(latitude: 30.030332, longitude: -90.0705877)),
+        Building(Name : "Science Building (SC)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.025878, longitude: -90.0695738)),
+        Building(Name : "Tennis Center",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0283395, longitude: -90.0473533)),
+        Building(Name : "University Center (UC)",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0291822, longitude: -90.0653268)),
+        Building(Name : "UNO Federal Credit Union",Coordinates : CLLocationCoordinate2D.init(latitude: 30.0306293, longitude: -90.0692055)),
         ]
-    
-//    ]
-    
-//    
-//    name: "Administration Annex",
-//    coordinates: "30.0265908,-90.0687805"
-//    },
-//    {
-//    name: "Advanced Technology Center",
-//    coordinates: "30.0319744,-90.0666836"
-//    },
-//    {
-//    name: "Amphitheater",
-//    coordinates: "30.0281303,-90.0679018"
-//    },
-//    {
-//    name: "Athletic Center",
-//    coordinates: "30.0280219,-90.0539645"
-//    },
-//    {
-//    name: "ATM",
-//    coordinates: "30.0277085,-90.0685991"
-//    },
-//    {
-//    name: "Bicentennial Education Center (ED)",
-//    coordinates: "30.0269345,-90.0696859"
-//    },
-//    {
-//    name: "Biology Building (BIO)",
-//    coordinates: "30.0269345,-90.0696859"
-//    },
-//    {
-//    name: "Center for Energy Resource Management (CERM)",
-//    coordinates: "30.0304945,-90.0663327"
-//    },
-//    {
-//    name: "Chemistry-Sciences Annex (CSB)",
-//    coordinates: "30.0263246,-90.0682276"
-//    },
-//    {
-//    name: "Computer Center (CC)",
-//    coordinates: "30.0263246,-90.0682276"
-//    },
-//    {
-//    name: "The Cove",
-//    coordinates: "30.0264361,-90.0691932"
-//    },
-//    {
-//    name: "Earl K. Long Library (LIB)",
-//    coordinates: "30.0264361,-90.0691932"
-//    },
-//    {
-//    name: "Engineering Building (EN)",
-//    coordinates: "30.0264361,-90.0691932"
-//    },
-//    {
-//    name: "Facility Services",
-//    coordinates: "30.0279937,-90.0696798"
-//    },
-//    {
-//    name: "Fine Arts Building (FA)",
-//    coordinates: "@30.0279937,-90.0696798"
-//    },
-//    {
-//    name: "Geology &amp; Psychology Building ",
-//    coordinates: "30.0279937,-90.0696798"
-//    },
-//    {
-//    name: "Homer L. Hitt Alumni Center",
-//    coordinates: "30.0292477,-90.0681563"
-//    },
-//    {
-//    name: "Human Performance Center (HPC)",
-//    coordinates: "30.0276593,-90.0662788"
-//    },
-//    {
-//    name: "International Center",
-//    coordinates: "30.02755,-90.0648232"
-//    },
-//    {
-//    name: "Kirschman Hall (KH)",
-//    coordinates: "30.0311299,-90.0689243"
-//    },
-//    {
-//    name: "Lafitte Village",
-//    coordinates: "30.0246244,-90.0690664"
-//    },
-//    {
-//    name: "Lakefront Arena",
-//    coordinates: "30.0297087,-90.0542144"
-//    },
-//    {
-//    name: "Liberal Arts Building (LA)",
-//    coordinates: "30.0283952,-90.074955"
-//    },
-//    {
-//    name: "Maestri Field at First NBC Ballpark",
-//    coordinates: "30.0302556,-90.0505327"
-//    },
-//    {
-//    name: "Main Entrance",
-//    coordinates: "30.0299614,-90.0698461"
-//    },
-//    {
-//    name: "Mathematics Building (MATH)",
-//    coordinates: "30.0282639,-90.0691808"
-//    },
-//    {
-//    name: "Milneburg Hall",
-//    coordinates: "30.0278476,-90.0680628"
-//    },
-//    {
-//    name: "Navy Information Technology Center",
-//    coordinates: "30.0321572,-90.0609189"
-//    },
-//    {
-//    name: "Newman Center",
-//    coordinates: "@30.0277533,-90.0648985,"
-//    },
-//    {
-//    name: "Oliver St. Pé Center - TRAC",
-//    coordinates: "30.0237203,-90.069511"
-//    },
-//    {
-//    name: "Parking Lots",
-//    coordinates: "30.0271486,-90.0712017"
-//    },
-//    {
-//    name: "Performing Arts Center (PAC)",
-//    coordinates: "30.0277028,-90.0680419"
-//    },
-//    {
-//    name: "Pontchartrain Hall North",
-//    coordinates: "30.0260146,-90.0659541"
-//    },
-//    {
-//    name: "Pontchartrain Hall South",
-//    coordinates: "30.0252022,-90.0654432"
-//    },
-//    {
-//    name: "Privateer Enrollment Center",
-//    coordinates: "30.0264074,-90.0680128"
-//    },
-//    {
-//    name: "Privateer Place (PRVTER)",
-//    coordinates: "30.029626,-90.0724492"
-//    },
-//    {
-//    name: "Recreation &amp; Fitness Center",
-//    coordinates: "30.0294356,-90.0662425"
-//    },
-//    {
-//    name: "The Sandbar at The Cove",
-//    coordinates: "30.027954,-90.0722507"
-//    },
-//    {
-//    name: "School of Hotel, Restaurant &amp; Tourism Administration",
-//    coordinates: "30.030332,-90.0705877"
-//    },
-//    {
-//    name: "Science Building (SC)",
-//    coordinates: "30.025878,-90.0695738"
-//    },
-//    {
-//    name: "Tennis Center",
-//    coordinates: "30.0283395,-90.0473533"
-//    },
-//    {
-//    name: "University Center (UC)",
-//    coordinates: "30.0291822,-90.0653268"
-//    },
-//    {
-//    name: "UNO Federal Credit Union",
-//    coordinates: "30.0306293,-90.0692055"
-//    })]
-//    }
-
 }

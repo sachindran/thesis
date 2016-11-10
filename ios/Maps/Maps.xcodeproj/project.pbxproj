@@ -13,6 +13,7 @@
 		0331D4E11DBC401B00C8C60A /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331D4E01DBC401B00C8C60A /* Coordinates.swift */; };
 		0331D4E41DBC4EF200C8C60A /* CoordinateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331D4E31DBC4EF200C8C60A /* CoordinateService.swift */; };
 		0331D4E71DBC56F500C8C60A /* DirectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331D4E61DBC56F500C8C60A /* DirectionService.swift */; };
+		03656EE31DD49179004E19A8 /* maps_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03656EE21DD49179004E19A8 /* maps_arrow.png */; };
 		038C42F91DC75C4B0005C993 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038C42F81DC75C4B0005C993 /* PopUpViewController.swift */; };
 		038C42FB1DC75FAD0005C993 /* BuildingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038C42FA1DC75FAD0005C993 /* BuildingsTableViewCell.swift */; };
 		0391AB761DC7DD0000CA8B06 /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0391AB6B1DC7DD0000CA8B06 /* ARCoordinate.m */; };
@@ -39,6 +40,7 @@
 		0331D4E01DBC401B00C8C60A /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		0331D4E31DBC4EF200C8C60A /* CoordinateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateService.swift; sourceTree = "<group>"; };
 		0331D4E61DBC56F500C8C60A /* DirectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionService.swift; sourceTree = "<group>"; };
+		03656EE21DD49179004E19A8 /* maps_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps_arrow.png; sourceTree = "<group>"; };
 		038C42F81DC75C4B0005C993 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		038C42FA1DC75FAD0005C993 /* BuildingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingsTableViewCell.swift; sourceTree = "<group>"; };
 		0391AB6A1DC7DD0000CA8B06 /* ARCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCoordinate.h; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		0331D4E51DBC506400C8C60A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				03656EE21DD49179004E19A8 /* maps_arrow.png */,
 				0391AB801DC899D900CA8B06 /* arrow.png */,
 				032541EB1DC73300000AF682 /* Main.storyboard */,
 				03A579F81DB5C60A002E9813 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				0391AB811DC899D900CA8B06 /* arrow.png in Resources */,
 				03A579F91DB5C60A002E9813 /* Assets.xcassets in Resources */,
 				03AF77291DB9E30C000B03F3 /* google-geometry-lib.js in Resources */,
+				03656EE31DD49179004E19A8 /* maps_arrow.png in Resources */,
 				032541ED1DC73300000AF682 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

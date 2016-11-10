@@ -23,11 +23,12 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     let unoBuildings = UNOBuilidings()
     var navigationOn = false
     var legsCount = 0
-    var stepsCount = [Int]()
+    var stepsCount = 0
     var currentLeg = 0
-    var currentStep = [Int]()
+    var currentStep = 0
     var overviewCoordinateCount = 0
-    var currentOverviewCoordinate = 0
+    var currentOverviewCoordinate = 1
+    var userUpdatedBearing = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,25 +48,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         mapView.isMyLocationEnabled = true
         self.mapView1.addSubview(mapView)
         
-        // Get the superview's layout
-//        let margins = mapView1.layoutMarginsGuide
-//        
-//        mapView.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
-//        //mapView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
-//        // Pin the leading edge of myView to the margin's leading edge
-//        mapView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-//        
-//        // Pin the trailing edge of myView to the margin's trailing edge
-//        mapView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        
-        // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: 37.3998485, longitude: -121.9586511)
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = mapView
         
-            }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -78,8 +67,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         self.overviewCoordinateCount = (withDirection.routes?[0].overview_polyline?.coordinates?.count)!
         var i = 0
         for leg in (withDirection.routes?[0].legs)! {
-            self.stepsCount.append((leg.steps?.count)!)
-            self.currentStep.append(0)
+            self.stepsCount = (leg.steps?.count)!
             for step in leg.steps!{
                 let path = GMSPath.init(fromEncodedPath: (step.polyline?.points)!)
                 let polyline = GMSPolyline(path: path)
@@ -91,7 +79,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         let overviewPath = GMSPath.init(fromEncodedPath: (withDirection.routes?[0].overview_polyline?.points)!)
         let overviewPolyline = GMSPolyline(path: overviewPath)
         overviewPolyline.strokeColor =  UIColor.red;
-        overviewPolyline.strokeWidth = 10.0
+        overviewPolyline.strokeWidth = 1.0
         overviewPolyline.map = self.mapView
         
         let startLocation = CLLocation(latitude: withDirection.routes![0].legs![0].steps![0].start_location!.lat!, longitude: withDirection.routes![0].legs![0].steps![0].start_location!.lng!)
@@ -129,6 +117,14 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
             if let cameraViewController = segue.destination as? CameraViewController {
                 cameraViewController.directions = directions
                 cameraViewController.userLocation = userLocation
+                cameraViewController.navigationOn = navigationOn
+                cameraViewController.legsCount = legsCount
+                cameraViewController.stepsCount = stepsCount
+                cameraViewController.currentLeg = currentLeg
+                cameraViewController.currentStep = currentStep
+                cameraViewController.overviewCoordinateCount = overviewCoordinateCount
+                cameraViewController.currentOverviewCoordinate = currentOverviewCoordinate
+                cameraViewController.userUpdatedBearing = userUpdatedBearing
             }
         }
     }
@@ -157,21 +153,38 @@ extension ViewController: CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
         print("Got current location")
-//         var currentLocation = manager.location
-//         if(navigationOn){
-//             var step = self.directions.routes?[0].legs?[0].steps?[currentStep[0]]
-//             var overviewCoordinate = CLLocation.init(latitude: (self.directions.routes?[0].overview_polyline?.coordinates?[currentOverviewCoordinate].lat)!, longitude: (self.directions.routes?[0].overview_polyline?.coordinates?[currentOverviewCoordinate].lng)!)
-   //          var stepEndLocation = CLLocation.init(latitude: (step?.end_location!.lat)!, longitude:  (step?.end_location?.lng)!)
-            // let direction = directionServices.getBearingBetweenTwoPoints1(point1:(currentLocation?.coordinate)!, point2: (overviewCoordinate.coordinate))
-            // let currentPoint = GMSCameraPosition.camera(withTarget: (currentLocation?.coordinate)!, zoom: 18.0, bearing: direction, viewingAngle: 50)
-            // mapView.animate(to: currentPoint)
-            // var stepDistance = currentLocation?.distance(from: stepEndLocation)
-            // var overviewCoordinateDistance = currentLocation?.distance(from: overviewCoordinate)
-        // }
+        let currentLocation = manager.location
+        if(navigationOn){
+            let step = self.directions.routes?[0].legs?[0].steps?[currentStep]
+            
+            let overrviewCoordinateLocation = CLLocation.init(latitude: (directions?.routes?[0].overview_polyline?.coordinates?[currentOverviewCoordinate].lat)!, longitude: (directions?.routes?[0].overview_polyline?.coordinates?[currentOverviewCoordinate].lng)!)
+            
+            let stepEndCoordinateLocation = CLLocation.init(latitude: (step?.end_location!.lat)!, longitude:  (step?.end_location?.lng)!)
+            
+            userUpdatedBearing = directionServices.getBearingBetweenTwoPoints1(point1:(currentLocation?.coordinate)!, point2: (overrviewCoordinateLocation.coordinate))
+            
+            let currentPoint = GMSCameraPosition.camera(withTarget: (currentLocation?.coordinate)!, zoom: 18.0, bearing: userUpdatedBearing, viewingAngle: 50)
+            mapView.animate(to: currentPoint)
+            
+            let overviewDistance : CLLocationDistance = (currentLocation?.distance(from: overrviewCoordinateLocation))!
+            if(overviewDistance < 1.0){
+                if(currentOverviewCoordinate < overviewCoordinateCount){
+                    currentOverviewCoordinate += 1
+                } else {
+                    print("Reached Destination")
+                }
+            }
+            let stepDistance : CLLocationDistance = (currentLocation?.distance(from: stepEndCoordinateLocation))!
+            if(stepDistance < 5.0){
+                if(currentStep < self.stepsCount){
+                    currentStep += 1
+                } else {
+                    print("Reached Destination")
+                }
+            }
+        }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

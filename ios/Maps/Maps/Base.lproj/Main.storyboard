@@ -44,7 +44,7 @@
                                 </segue>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Camera" id="qiW-By-0wj">
+                        <barButtonItem key="rightBarButtonItem" title="AR Mode" id="qiW-By-0wj">
                             <connections>
                                 <segue destination="gKQ-oU-4CT" kind="show" identifier="cameraSegue" id="hEl-Se-7bm"/>
                             </connections>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-378.39999999999998" y="-622.03898050974522"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--AR Mode-->
         <scene sceneID="t5u-14-K7P">
             <objects>
-                <viewController storyboardIdentifier="CameraViewController" id="gKQ-oU-4CT" customClass="CameraViewController" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" title="AR Mode" id="gKQ-oU-4CT" customClass="CameraViewController" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hIo-LT-JYv"/>
                         <viewControllerLayoutGuide type="bottom" id="ApH-c7-tKb"/>
